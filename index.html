@@ -1,66 +1,75 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Editor de scripts</title>
-  <link rel="stylesheet" href="lib/codemirror.css">
-  <link rel="stylesheet" href="lib/theme/monokai.css">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="editor-container">
-    <div class="editor-header">
-      <span>Editor de scripts · </span>
-    </div>
-    
-    <div class="toolbar">
-      <button title="Editar"><i class="icon-edit"></i></button>
-      <button title="Desfazer"><i class="icon-undo"></i></button>
-      <button title="Refazer"><i class="icon-redo"></i></button>
-      <button title="Aumentar zoom"><i class="icon-zoom-in"></i></button>
-      <button title="Diminuir zoom"><i class="icon-zoom-out"></i></button>
-      <button title="Limpar formatação"><i class="icon-eraser"></i></button>
-      <button title="Alternar quebra de linha"><i class="icon-line-break"></i></button>
-      <button title="Alternar numeração"><i class="icon-numbers"></i></button>
-      <button title="Adicionar comentário"><i class="icon-comment"></i></button>
-      <button title="Formatar código"><i class="icon-format"></i></button>
-      <button title="Ativar autocompletar"><i class="icon-autocomplete"></i></button>
-      <button title="Executar"><i class="icon-play"></i></button>
-      <button title="Verificar sintaxe"><i class="icon-check"></i></button>
-    </div>
-
-    <div class="editor-main">
-      <textarea id="codeEditor"></textarea>
-    </div>
-
-    <div class="editor-footer">
-      <div class="status-info">
-        <span>Linha: <span id="lineInfo">0</span>, Coluna: <span id="colInfo">0</span></span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editor de scripts</title>
+    <link rel="stylesheet" href="lib/codemirror.css" />
+    <link rel="stylesheet" href="lib/theme/monokai.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div class="editor-container">
+      <div class="editor-header">
+        <span>Editor de scripts · </span>
       </div>
-      <div class="right-status">
-        <span><i class="icon-line-break"></i> Quebra de linha</span>
+
+      <div class="toolbar">
+        <button title="Editar"><i class="icon-edit"></i></button>
+        <button title="Desfazer"><i class="icon-undo"></i></button>
+        <button title="Refazer"><i class="icon-redo"></i></button>
+        <button title="Aumentar zoom"><i class="icon-zoom-in"></i></button>
+        <button title="Diminuir zoom"><i class="icon-zoom-out"></i></button>
+        <button title="Limpar formatação"><i class="icon-eraser"></i></button>
+        <button title="Alternar quebra de linha">
+          <i class="icon-line-break"></i>
+        </button>
+        <button title="Alternar numeração"><i class="icon-numbers"></i></button>
+        <button title="Adicionar comentário">
+          <i class="icon-comment"></i>
+        </button>
+        <button title="Formatar código"><i class="icon-format"></i></button>
+        <button title="Ativar autocompletar">
+          <i class="icon-autocomplete"></i>
+        </button>
+        <button title="Executar"><i class="icon-play"></i></button>
+        <button title="Verificar sintaxe"><i class="icon-check"></i></button>
+      </div>
+
+      <div class="editor-main">
+        <textarea id="codeEditor"></textarea>
+      </div>
+
+      <div class="editor-footer">
+        <div class="status-info">
+          <span
+            >Linha: <span id="lineInfo">0</span>, Coluna:
+            <span id="colInfo">0</span></span
+          >
+        </div>
+        <div class="right-status">
+          <span><i class="icon-line-break"></i> Quebra de linha</span>
+        </div>
+      </div>
+
+      <div class="tabs-container">
+        <div class="tabs">
+          <div class="tab active">CONSOLE</div>
+          <div class="tab">EXECUÇÕES</div>
+        </div>
+        <div class="tab-actions">
+          <button><i class="icon-clear"></i></button>
+          <button><i class="icon-toggle"></i></button>
+        </div>
+      </div>
+
+      <div class="console-panel">
+        <!-- Conteúdo do console aparecerá aqui -->
       </div>
     </div>
 
-    <div class="tabs-container">
-      <div class="tabs">
-        <div class="tab active">CONSOLE</div>
-        <div class="tab">EXECUÇÕES</div>
-      </div>
-      <div class="tab-actions">
-        <button><i class="icon-clear"></i></button>
-        <button><i class="icon-toggle"></i></button>
-      </div>
-    </div>
-
-    <div class="console-panel">
-      <!-- Conteúdo do console aparecerá aqui -->
-    </div>
-  </div>
-
-  <script src="lib/codemirror.js"></script>
-  <script src="lib/mode/javascript/javascript.js"></script>
-  <script src="script.js"></script>
-</body>
+    <script src="lib/codemirror.js"></script>
+    <script src="lib/mode/javascript/javascript.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
 </html>
