@@ -76,9 +76,44 @@
       </div>
     </div>
 
+    <!-- Chat icon -->
     <section id="chat-ai">
       <img src="assets/chat-icon.svg" alt="chat-icon" />
     </section>
+
+    <!-- Chat container -->
+    <div id="chat-container">
+      <div id="chat-header">
+        <div>Chat AI</div>
+        <button id="close-chat">&times;</button>
+      </div>
+      <div id="chat-messages">
+        <div class="message ai-message">Olá! Como posso ajudar você hoje?</div>
+      </div>
+      <div id="chat-input-container">
+        <input
+          type="text"
+          id="chat-input"
+          placeholder="Digite sua mensagem..."
+        />
+        <button id="send-message">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+      </div>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.12/codemirror.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.12/mode/javascript/javascript.min.js"></script>
